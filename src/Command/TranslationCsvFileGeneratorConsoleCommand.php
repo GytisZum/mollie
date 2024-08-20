@@ -48,7 +48,10 @@ class TranslationCsvFileGeneratorConsoleCommand extends Command
 
         $csvHeader = [
             'ID',
-            'IT'
+            'EN',
+            'NL',
+            'DE',
+            'FR',
         ];
         $translations = $GLOBALS['_MODULE'];
         try {
@@ -65,8 +68,9 @@ class TranslationCsvFileGeneratorConsoleCommand extends Command
         }
 
         $translationFiles = [
-            1 => 'en',
-            5 => 'it'
+            2 => 'nl',
+            3 => 'de',
+            4 => 'fr',
         ];
         fputcsv($fp, $csvHeader);
         foreach ($translationFiles as $position => $file) {
