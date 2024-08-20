@@ -28,6 +28,7 @@ class UploadTranslationsFromCsvFileConsoleCommand extends Command
     const CSV_POSITION_NL = 2;
     const CSV_POSITION_DE = 3;
     const CSV_POSITION_FR = 4;
+    const CSV_POSITION_IT = 5;
 
     /**
      * @var Mollie
@@ -60,10 +61,12 @@ class UploadTranslationsFromCsvFileConsoleCommand extends Command
                 $nl = 'nl.php';
                 $de = 'de.php';
                 $fr = 'fr.php';
+                $it = 'it.php';
                 file_put_contents($en, $csvHeader);
                 file_put_contents($nl, $csvHeader);
                 file_put_contents($de, $csvHeader);
                 file_put_contents($fr, $csvHeader);
+                file_put_contents($it, $csvHeader);
 
                 while (($line = fgets($handle)) !== false) {
                     $line = preg_replace("/\r|\n/", '', $line);
@@ -80,6 +83,7 @@ class UploadTranslationsFromCsvFileConsoleCommand extends Command
                     $this->updateTranslation($nl, $values, self::CSV_POSITION_NL);
                     $this->updateTranslation($de, $values, self::CSV_POSITION_DE);
                     $this->updateTranslation($fr, $values, self::CSV_POSITION_FR);
+                    $this->updateTranslation($it, $values, self::CSV_POSITION_IT);
                 }
             } else {
                 $output->writeln("<error>Couldn't find csv file</error>");

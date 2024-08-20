@@ -70,6 +70,7 @@ class UpdateTranslationsConsoleCommand extends Command
                     $translationsArray[$key][2] = $value[1];
                     $translationsArray[$key][3] = $value[2];
                     $translationsArray[$key][4] = $value[3];
+                    $translationsArray[$key][5] = $value[4];
                 }
             }
         }

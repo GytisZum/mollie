@@ -66,6 +66,8 @@ class Config
         'trustly' => ['at', 'de', 'ee', 'es', 'fi', 'lt', 'lv', 'nl'],
         'riverty' => ['nl', 'be', 'de', 'at'],
         'payconiq' => [],
+        'satispay' => ['at', 'be', 'bg', 'hr', 'cy', 'cz', 'dk', 'ee', 'fi', 'fr', 'de', 'gr', 'hu', 'is', 'ie', 'it',
+            'lv', 'lt', 'li', 'lu', 'mt', 'nl', 'no', 'pl', 'pt', 'ro', 'sk', 'si', 'es', 'se', 'ch', 'gb'], // todo check gb or tr
     ];
 
     const SUPPORTED_PHP_VERSION = '5.6';
@@ -243,6 +245,7 @@ class Config
     const MOLLIE_VOUCHER_METHOD_ID = 'voucher';
     const MOLLIE_in3_METHOD_ID = 'in3';
     const RIVERTY = 'riverty';
+    const SATISPAY = 'satispay';
 
     const MOLLIE_VOUCHER_CATEGORY_NULL = 'null';
     const MOLLIE_VOUCHER_CATEGORY_MEAL = 'meal';
@@ -328,6 +331,7 @@ class Config
         'riverty' => 'Riverty',
         'payconiq' => 'Payconiq',
         'trustly' => 'Trustly',
+        'satispay' => 'Satispay',
     ];
 
     const MOLLIE_BUTTON_ORDER_TOTAL_REFRESH = 'MOLLIE_BUTTON_ORDER_TOTAL_REFRESH';
